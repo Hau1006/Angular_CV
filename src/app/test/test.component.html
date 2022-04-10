@@ -1,0 +1,23 @@
+<!-- Instead of using multiple async pipes, 
+    try adding an ng-container 
+    and using the "async as" syntax. 
+    It will improve your 
+    app's runtime performance and readability.  -->
+
+<!-- dont -->
+
+<span>{{ (user | async)?.name }}</span>
+<br />
+<span>{{ (user | async)?.age }}</span>
+<br />
+<!-- do -->
+
+<ng-container *ngIf="user | async as u">
+  <span>{{ u.name }}</span>
+  <br /><span>{{ u.age }}</span>
+</ng-container>
+<div class="page">
+  <div class="container">
+    <form action="submit"></form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+{
+    "Data": [
+        {
+            "id":1,
+            "ten":"Nguyen Van A",
+            "vitri":"FE",
+            "ngonngu":"java",
+            "namKn":2
+
+        },
+        {
+            "id":2,
+            "ten":"Nguyen Van C",
+            "vitri":"FE",
+            "ngonngu":"java",
+            "namKn":2
+
+        },
+        {
+            "id":3,
+            "ten":"Nguyen Van D",
+            "vitri":"FE",
+            "ngonngu":"java",
+            "namKn":2
+
+        },
+        {
+            "id":4,
+            "ten":"Nguyen Van K",
+            "vitri":"FE",
+            "ngonngu":"java",
+            "namKn":2
+
+        }
+    ]
+}

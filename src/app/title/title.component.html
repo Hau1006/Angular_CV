@@ -1,0 +1,23 @@
+<div class="title-page"></div>
+<div class="title_arrow">
+  <button
+    type="button"
+    class="btn_color"
+    (click)="collapse.toggle()"
+    [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseExample"
+  >
+    {{ title }}
+  </button>
+
+  <div class="bi bi-caret-down" [ngClass]="{ rote: isCollapsed }"></div>
+</div>
+
+<!-- <div class="throught-line"></div> -->
+<div class="content" #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div class="card">
+    <div class="info_title">
+      <ng-template [ngTemplateOutlet]="content"></ng-template>
+    </div>
+  </div>
+</div>

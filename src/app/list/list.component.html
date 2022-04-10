@@ -1,0 +1,63 @@
+<div class="container">
+  <form>
+    <div class="mb-3 row">
+      <label
+        for="table-filtering-search"
+        class="col-xs-3 col-sm-auto col-form-label"
+        >Full text search:</label
+      >
+      <div class="col-xs-3 col-sm-auto">
+        <input
+          id="table-filtering-search"
+          class="form-control"
+          type="text"
+          [formControl]="filter"
+        />
+      </div>
+    </div>
+  </form>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Vị Trí</th>
+        <th scope="col">Ngôn Ngữ</th>
+        <th scope="col">Số Năm Kinh Nghiệm</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let user of Users$ | async; index as i"
+        (click)="onSelect(user, i)"
+      >
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+          <ngb-highlight
+            [result]="user.name"
+            [term]="filter.value"
+          ></ngb-highlight>
+        </td>
+        <td>
+          <ngb-highlight
+            [result]="user.position"
+            [term]="filter.value"
+          ></ngb-highlight>
+        </td>
+        <td>
+          <ngb-highlight
+            [result]="user.language"
+            [term]="filter.value"
+          ></ngb-highlight>
+        </td>
+        <td>
+          <ngb-highlight
+            [result]="user.experience"
+            [term]="filter.value"
+          ></ngb-highlight>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

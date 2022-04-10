@@ -1,0 +1,33 @@
+.card-body {
+    width: 100%;
+    border: transparent;
+
+    .form {
+        width: 100%;
+        border: transparent;
+    }
+}
+
+.btn_submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+.btn_edit {
+    background-color: #d39b1a;
+    background: transparent;
+    color: #ffffff;
+    border: 0px solid transparent;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    // .btn {
+    //     &:hover {
+    //     color: red;
+    //     }
+
+
+    // }
+
+}

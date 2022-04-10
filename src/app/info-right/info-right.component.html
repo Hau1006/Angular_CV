@@ -1,0 +1,16 @@
+<div class="page">
+  <div class="container">
+    <div class="title">
+      <h3>{{ bigTitle }}</h3>
+    </div>
+    <div class="info">
+      <h3>{{ title }}</h3>
+      <span>{{ job }}</span>
+      <h3>{{ datestart }} - {{ dateend }}</h3>
+      <div *ngFor="let fo of info; let i = index" class="info_info">
+        <p>- {{ fo.info1 }}</p>
+        <p>- {{ fo.info2 }}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+<div class="page-info">
+  <div class="container">
+    <div class="img-info">
+      <div class="img">
+        <img
+          class="img_info"
+          src="{{ dataService.User.image }}"
+          alt="hinhanh"
+        />
+      </div>
+      <div class="info">
+        <div class="info__title">
+          <h2>{{ obj?.name ? obj?.name : dataService.User.name }}</h2>
+          <h3>{{ dataService.User.job }}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="info-bottom">
+      <div class="left">
+        <div class="left_info">
+          <div class="box_info">
+            <app-title [content]="info"></app-title>
+            <ng-template class="box box-icon" #info>
+              <p>
+                <span class="bi bi-calendar"> </span>
+                {{ dataService.User.date }}
+              </p>
+
+              <p>
+                <span class="bi bi-telephone"> </span>
+                {{ dataService.User.phone }}
+              </p>
+
+              <p>
+                <span class="bi bi-envelope"> </span>
+                {{ dataService.User.email }}
+              </p>
+
+              <p>
+                <span class="bi bi-house-door"> </span>
+                {{ dataService.User.address }}
+              </p>
+
+              <p>
+                <span class="bi bi-facebook"> </span>
+                {{ dataService.User.fb }}
+              </p>
+            </ng-template>
+          </div>
+
+          <app-title
+            [title]="'Mục Tiêu Nghề Ngiệp'"
+            [content]="info_1"
+          ></app-title>
+          <ng-template class="box_info" #info_1>
+            <div class="box">
+              <p>
+                {{ dataService.User.object }}
+              </p>
+            </div>
+          </ng-template>
+
+          <app-title [title]="'Các Kỹ Năng'" [content]="info_2"></app-title>
+          <ng-template class="box_info" #info_2>
+            <div class="box">
+              <div
+                class="info_skill"
+                *ngFor="let skill of dataService.User.skills; let i = index"
+              >
+                <p>- {{ skill.skill1 }}</p>
+                <p>- {{ skill.skill2 }}</p>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right_info">
+          <div #pagebody>
+            <div class="page-body">
+              <app-info-right
+                [bigTitle]="'Học Vấn'"
+                [title]="'Dai Hoc TopCv'"
+                [job]="'Kinh doanh ngan Hang'"
+                [datestart]="'09/2000'"
+                [dateend]="'08/2001'"
+              ></app-info-right>
+            </div>
+          </div>
+          <app-info-right
+            [bigTitle]="'Kinh Nghiệm Làm Việc'"
+            [title]="'Dai Hoc TopCv'"
+            [job]="'Kinh doanh ngan Hang'"
+            [datestart]="'09/2000'"
+            [dateend]="'08/2001'"
+          ></app-info-right>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
